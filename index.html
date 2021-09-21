@@ -1,0 +1,50 @@
+<!-- Always first render your HTML in Vanilla JS/ machine COding  Interview Rounds -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cash Register Portal</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Cash Register App</h1>
+        <p class="description">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+
+        <label for="bill-amount">Bill Amount:</label>
+        <!--IMP: BEST PRACTICE: Symantic HTML we can also use a <div> but <label> tells the screen reader that it is a label only-->
+        <!-- The for inside the label connects the input and the label via the CSS id SELECtor  -->
+        <input id="bill-amount" type="text" />
+        <label for="cash-given">Cash Given:</label>
+        <input id="cash-given" type="text" />
+        <button id="check-button">Check</button>
+        <p id="error-message"></p>
+        <table class="change-table">
+            <caption>Return Change:</caption>
+            <tr>
+                <th>No. of Notes</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Notes</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+</body>
+<script src="./main.js"></script>
+
+</html>
