@@ -1,50 +1,80 @@
-<!-- Always first render your HTML in Vanilla JS/ machine COding  Interview Rounds -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Cash Register Portal</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Cash Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container">
-        <h1 class="heading">Cash Register App</h1>
-        <p class="description">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
-
-        <label for="bill-amount">Bill Amount:</label>
-        <!--IMP: BEST PRACTICE: Symantic HTML we can also use a <div> but <label> tells the screen reader that it is a label only-->
-        <!-- The for inside the label connects the input and the label via the CSS id SELECtor  -->
-        <input id="bill-amount" type="text" />
-        <label for="cash-given">Cash Given:</label>
-        <input id="cash-given" type="text" />
-        <button id="check-button">Check</button>
-        <p id="error-message"></p>
-        <table class="change-table">
-            <caption>Return Change:</caption>
-            <tr>
-                <th>No. of Notes</th>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Notes</th>
-                <td>2000</td>
-                <td>500</td>
-                <td>100</td>
-                <td>20</td>
-                <td>10</td>
-                <td>5</td>
-                <td>1</td>
-            </tr>
+        <h1 class="heading">Cash Register Manager</h1>
+        <p class="description">
+            Enter the bill amount and cash given by the customer and know minimum number of notes to return.
+        </p>
+        <div class="form-container">
+            <table>
+                <tr>
+                    <td>
+                        <label class="form-input-label" for="bill-amount">Bill Amount:</label
+              >
+            </td>
+            <td><input class="form-input" id="bill-amount" type="number" /></td>
+          </tr>
+          <tr>
+            <td>
+              <label class="form-input-label" for="cash-given"
+                >Cash Given:</label
+              >
+            </td>
+            <td><input class="form-input" id="cash-given" type="number" /></td>
+          </tr>
         </table>
+      </div>
 
-</body>
-<script src="./main.js"></script>
+      <!--<button>Next</button>-->
 
+      <button id="check-button">Check</button>
+      <p id="error-message"></p>
+      <div class="change-table-container">
+        <table class="change-table">
+          <caption class="change-table-caption">
+            Return Change:<span id="remaining-amt"></span>
+          </caption>
+          <tr>
+            <th class="change-table-cell">No. of Notes</th>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+            <td class="no-of-notes change-table-cell"></td>
+          </tr>
+          <tr>
+            <th class="change-table-cell">Note</th>
+            <td class="change-table-cell">2000</td>
+            <td class="change-table-cell">500</td>
+            <td class="change-table-cell">200</td>
+            <td class="change-table-cell">100</td>
+            <td class="change-table-cell">50</td>
+            <td class="change-table-cell">20</td>
+            <td class="change-table-cell">10</td>
+            <td class="change-table-cell">5</td>
+            <td class="change-table-cell">1</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="/main.js" type="text/javascript"></script>
 </html>
+© 2021 GitHub, Inc.
