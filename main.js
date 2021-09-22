@@ -37,7 +37,9 @@ function calculateChange(amountToBeReturned) {
     }
 }
 
-
+// NOTE:- To avoid variable overriding we use diffeeret variables when declaring  or using arguments in functions
+// like We've used the message variable above and the msg will avoid overriding it, otherwise if we've use the same message variable 
+// No result would've been displayed.
 function showMessage(msg) {
     message.style.display = "block";
     message.innerText = msg;
