@@ -1,8 +1,3 @@
-const billAmount = document.querySelector("#bill-amount");
-const cashGiven = document.querySelector("#cash-given");
-const checkButton = document.querySelector("#check-button");
-const message = document.querySelector("#error-message");
-const noOfNotes = document.querySelectorAll(".no-of-notes");
 const remainAmt = document.querySelector("#remaining-amt");
 
 const availableNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
@@ -11,7 +6,7 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
     hideMessage();
     // The above statement hides the display property for the CSS selector bound with the message element. 
 
-    if (typeof(billAmount.value) == 'number' && Number(billAmount.value) > 0) {
+    if (Number(billAmount.value) > 0) {
         if (Number(cashGiven.value) >= Number(billAmount.value)) {
             const amountToBeReturned = Number(cashGiven.value) - Number(billAmount.value);
             remainAmt.innerText = amountToBeReturned;
