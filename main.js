@@ -5,13 +5,11 @@ const message = document.querySelector("#error-message");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
 const remainAmt = document.querySelector("#remaining-amt");
 
-// checkButton.addEventListener('click', function getValues() {
-//     console.log(billAmount, cashGiven);
-// })
 const availableNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", function validateBillAndCashAmount() {
-    hideMessage();
+    message.style.display = "none";
+    // The above statement hides the display property for the CSS selector bound with the message element. 
     if (Number(billAmount.value) > 0) {
         if (Number(cashGiven.value) >= Number(billAmount.value)) {
             const amountToBeReturned = Number(cashGiven.value) - Number(billAmount.value);
@@ -39,9 +37,6 @@ function calculateChange(amountToBeReturned) {
     }
 }
 
-function hideMessage() {
-    message.style.display = "none";
-}
 
 function showMessage(msg) {
     message.style.display = "block";
